@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <script type="module" crossorigin src="/goit-advancedjs-hw-04/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-b0d10f48.js">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-04/assets/vendor-1cd1f9d9.css">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-04/assets/index-678b510c.css">
+  </head>
+  <body>
+    <header class="header">
+      <form class="search-form" id="search-form">
+        <input
+          class="search-form-input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button class="search-form-btn" type="submit">Search</button>
+      </form>
+    </header>
+    <main class="main-ctn">
+      <div class="gallery"></div>
+      <div class="loader hidden"></div>
+      <!-- load more btn -->
+
+      <!-- infinite scroll -->
+      <div class="js-guard"></div>
+    </main>
+    
+  </body>
+</html>
