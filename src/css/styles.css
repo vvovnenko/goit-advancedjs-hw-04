@@ -1,25 +1,133 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+@import '../../node_modules/modern-normalize/modern-normalize.css';
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #4bdadb;
+  position: sticky;
+  top: 0;
+  height: 65px;
+  display: flex;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form-btn {
+  border: none;
+  height: 40px;
+  border-radius: 0 8px 8px 0;
+  background-color: #53d353;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.search-form-btn:hover {
+  color: #ffffff;
+}
+
+.search-form-input {
+  line-height: 24px;
+  background-color: #ffff;
+  border-radius: 8px 0 0 8px;
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #111;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.photo-card {
+  width: calc(100% / 3 - 10px * 2);
+  margin: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(0, 255, 102, 0.5);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 5px 2px rgba(0, 4, 56, 0.5);
+  }
+}
+
+.photo-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
